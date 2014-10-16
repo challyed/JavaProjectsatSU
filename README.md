@@ -10,6 +10,7 @@ In a group of two create a desktop application for our community service fratern
 
 The first thing the user will do is open the file. There are 3 ways that we can do this. We can either use a drop down menu or use a radio group/button. The final way will allow the user to pick what family line file they would want to view.  It will also have that error message if something bad happens. 
 
+```
 //quick code made in a text editor 
 import java.io*
 Scanner s = null;
@@ -55,13 +56,13 @@ Scanner s = null;
         }
         
     }
-
+```
 
 
 
 Then the list will load into one of the GUI objects. We could do separate jtextfield that would load the data or put it in one huge list. They can click on someone’s name which will display a picture and some information about the person.
 
-
+```
  //quick code made in a text editor   
  jTextField#.setText(Lastname);
     jTextField#.setText(Name);
@@ -69,14 +70,14 @@ Then the list will load into one of the GUI objects. We could do separate jtextf
     jTextField#.setText(Gyear);
     //or it we are going it into a box
     jTextField#.setText(Lastname,Name,PledgeClass,Gyear);
-
+```
 
 
 
 
 After, you can sort the file via the year they leave Syracuse University, when they entered the fraternity and name. This would be in a radio group. 
 
-
+```
 // This is an example of what we want to do & /quick code made in a text editor 
 import java.util.Arrays;
 
@@ -93,7 +94,7 @@ for (int i=0;i<peopleofhe.length; i++){
     //jTextField#.setText(stnameofpeopleofhe);
 	
 }
-
+```
 
 
  
