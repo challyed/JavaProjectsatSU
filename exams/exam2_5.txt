@@ -1,0 +1,47 @@
+IST 256 Exam2 A
+Wednesday, October 30, 2013
+
+
+1.  (20 points) Write Java code that opens and reads a CSV file named OctoberSales.txt (sample shown) that contains a company’s sales data for the month of October.  Your code should calculate the average of the sales recorded in the data.
+
+Sample CSV data:
+
+David Jones, 23567.95
+Robert Lee, 33256.37
+…… much more data but not shown …..
+
+
+2.  (20 points) Example:  Given the following code:
+
+
+
+If a user types abcd into jTextField2 explain the order that the 4 statements, labeled statement 1, statement 2, statement3  and statement 4 in the comments, might be executed (or not) and why.
+
+If a user types 99.99 into jTextField1 and 0.08 into jTextField2 explain the order that the 4 statements, labeled statement 1, statement 2, statement3  and statement 4 in the comments, might be executed (or not) and why.
+
+
+3.  (20 points)  An array of type double named grades has been declared and contains grades for IST256 exam grades.  The size of the array is 30.  Write java code that sorts the array and then outputs the data in the array to a file named grades.html in html format with one line per grade.
+
+4.  (20 points)  An array of size 50 elements contains the names of the top college basketball players recruited for the NBA.   This array is called bplayers and is of String data type.  Write Java code that copies the first 25 elements to another array and the remaining 25 elements to a third array.
+
+Note:  The array bplayers cannot be changed.
+
+5.  (20 points)  A store that has multiple locations receives its daily sales data each day electronically in a CSV format.   Below is a sample of the data that they will be receiving:
+
+Sample CSV data:
+
+David Jones, 23567.95, Syracuse
+Robert Lee, 33256.37, Albany
+…… much more data but not shown …..
+
+
+Write Java code that defines a class named dailysales that contains the data elements shown.
+
+
+
+
+Write Java code that declares an array based on this class.  The array will have 3500 elements representing the data from all locations.
+
+
+
+Write Java code that processes the array and calculates the total sales for Syracuse and also the total sales for sales representative David Jones.

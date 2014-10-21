@@ -1,0 +1,109 @@
+IST 256 Spring 2014 Final Exam Practice
+
+
+Q1.   Write java code that defines a class named Rectangle.   Declare two properties of type double named width and height .  The scope of the two properties should be private and access to them should be via public getter and setter methods.
+
+Create a constructor method that instantiates a Rectangle object requiring its width and height .  Additionally declare a public method named area that computes and returns the area of a rectangle.  The method has to accept two input variables of type double.  Input variables are also known as arguments or parameters.  One input variable is for the width of the rectangle and the other for the height of the rectangle.  The method has to compute and return the area of the rectangle as a double data type.   The area of a rectangle is computed by multiplying its width by its height.   This method should be declared as static so that it is callable (invokable) without requiring object instantiation using Rectangle.area(x,y)  where x and y are arguments for width and height.
+
+
+
+
+Q2.  A CSV file named songs.csv has been collected that contains commercial song information.  For each song the following data fields have been gathered:
+
+Song Name, Artist, Label, Genre, Length of song in seconds
+
+Example of the content of songs.csv .
+
+99 Problems,Jay Z,Roc Nation,Hip Hop, 380
+………. more but omitted …..
+
+
+
+Write java code that reads this file into a single array.  The array has to be typed based on an appropriate class defined for this data.
+
+
+Q3. Suppose that we have an array called salesdata that is declared similar to the one shown below:
+
+	GrocerySales [] salesedata   = new GrocerySales [1000 ];
+
+Write code that scans the elements of this array and identifies the product that has the most sales in the first quarter (Q1Sales).  Your code should work for an array of any size.
+
+The code for the GrocerySales class is :
+
+
+
+Sample sales data is:
+
+Product
+Q1 Sales
+Q2 Sales
+Q3 Sales
+Q4 Sales
+Oranges
+6500.00
+7500.00
+9500.00
+8000.00
+Apples
+11000.00
+13500.00
+16800.00
+15500.00
+
+
+
+
+
+
+Q4:
+(Part 1) Define a class called Laptop that has three fields.  The first has the name of the brand (like Dell or HP), the second has the number of GB of memory (like 4 or 8), and the third has the number of GB of hard drive (like 160 or 500).
+
+Write a Constructor method that will initialize all three fields.  Add a method called getMemory that returns the value of the memory field.
+
+(Part 2)  Based on the Laptop class you defined make two instances of the class Laptop.
+
+For the first, the brand is “Dell”, with 4 GB of memory and 300 GB of hard drive.
+For the second, the brand is “Apple”, with 8 GB of memory and 500 GB of hard drive.
+
+ (Part 3)  Define a method within the Laptop class called updateMemory. If the current memory is smaller or equal to 4 (GB), double the memory size.
+
+ (Part 4) Define a method within the Laptop class that checks whether the laptop meets the requirements to install some application.  The method should be called recommendInstallation, and it will return a boolean result. The method has two parameters: suggestedMemory and suggestedHardDrive.  If this laptop memory is larger than suggestedMemory and the laptop disk size is larger than suggestedHardDrive, return the value true, otherwise, return false.
+
+
+
+
+
+
+Q5.  Suppose that there are four classes called Computer, Desktop, Laptop and Tablet and that they are related through inheritance.  Give at least two relations between these classes, i.e. specify possible subclass/superclass relationships.
+
+Q6. (Part 1) Suppose that we have a file named “songreviews.txt” where each line has the song title, the artist and the review score, with up to 50 songs in the file. Here are example lines from the file:
+	Revolution, Beatles, 2.5
+	Empire State of Mind, Jay-Z, 3.6
+Gangstas Paradise, Coolio, 3.1
+First design a class SongReview with fields to describe the data, a Constructor method to initialize the three fields and methods getTitle and getArtist to get (return) the title and artist (band) fields.
+
+ (Part 2)  Given the file described, assume that there is a Scanner named sc that has already been defined to have a stream to read the song reviews file.  Also assume the SongReview class is defined as in the previous question.  Write a declaration of an array with elements from the SongReview class, and write the code that will read each line of the file and save the data in a SongReview class in the array.
+
+
+(Part 3)  Based on the array defined in the previous question, suppose that we have a Text Field  (jTextField1), where the user can type the beginning of the name of the artist.  Write the code that will get the value from this textfield.  Use the method getArtist and search the song plays array to find all the songs whose artist starts with the text typed by the user.  Display all the song titles by the artist(s) that matched the search in jLabel1.
+
+
+Q7.  Suppose that we have a class for MovieReview as follows:
+
+public class MovieReview {
+private String movieTitle;
+    	private String genre;
+    	private int numberStars;
+}
+
+Write getters and setters for the fields of this class.
+
+Suppose that there is another class called Studio:
+
+public class Studio {
+public String studioName;
+    	public String studioCity;
+    	public String studioState;
+}
+
+Create a subclass of MovieReview named MovieStudioReviews and add a field of type Studio to the subclass.

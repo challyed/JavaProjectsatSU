@@ -1,0 +1,43 @@
+IST 256 Exam2 A
+Thursday, March 28, 2013
+
+
+1.  (20 points) Write Java code that opens and reads a text file named Exam2A.txt and calculates a word count for the file.
+
+
+
+2.  (20 points) Example:  Given the following code:
+
+
+
+If a user types abcd into jTextField2 explain the order that the 4 statements, labeled statement 1, statement 2, statement3  and statement 4 in the comments, might be executed (or not) and why.
+
+If a user types 99.99 into jTextField1 and 0.08 into jTextField2 explain the order that the 4 statements, labeled statement 1, statement 2, statement3  and statement 4 in the comments, might be executed (or not) and why.
+
+
+3.  (20 points)  An array of type double named bksales has been declared and contains daily sales for a Burger King restaurant.  Write Java code that process this array and computes the number of days that the daily sales were larger than $10,000.
+
+
+4.  (20 points)  An array of size 100 elements contains the names of the top college basketball players recruited for the NBA.   This array is called bplayers and is of String data type.  Write Java code that creates a copy of this array but with the players appearing in alphabetical order.
+
+Note:  The array bplayers cannot be changed it must be copied.
+
+5.  (40 points)  A Burger King store wants to better analyze their daily sales information.   They want to be able to compute for example what their average sales might be for each day of the week (Mondays, Tuesdays , etc) .   Below is a sample of the data that they will be storing:
+
+03/01/2013, friday, 15532.38
+03/02/2013, saturday, 18523.80
+……
+……
+03/25/2013, monday, 8532.55
+
+
+Write Java code that defines a class named bkdaysales that contains the data elements shown.
+
+
+
+
+Write Java code that declares an array based on this class.  The array will have 365 elements representing each day of the year.
+
+
+
+Write Java code that processes the array and calculates the average sales for Wednesdays.    
