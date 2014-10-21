@@ -1,0 +1,291 @@
+IST 256
+Exam 1, Test A
+
+
+
+Name:   ___________________________________________________________
+
+1.  (2 pts) Given the four types - String, int, double, boolean - which type you would declare if you were to use a variable that would hold the price of a book?
+
+	Because the price of a book has decimals the type to declare is double .
+
+2.  (2 pts) Given the four types - String, int, double, boolean - which data type would you declare if you were to use a variable that would store a student’s name?
+
+	  Because names use the alphabet the type to declare is String .
+
+3.  (2 pts) Given the four types - String, int, double, boolean - what data type is "$99.99"?
+  Because of the $ and the fact that it is enclosed by double quotes the type is String .
+
+4.  (2 pts) Given the four types - String, int, double, boolean - what data type would you declare if you were to use a variable to store the drinking age limit?
+
+		 Because age is usually given in whole numbers (integers) the type to declare is int .
+
+5.  (2 pts) Given the four types - String, int, double, boolean – what is the data type for the following:
+
+-99.99	  Because it has decimals the type is double .
+
+
+
+6.  (5 pts)  Write the declaration of a variable of type int and initialize it to 10.
+
+
+int  x ;
+x = 10 ;
+
+ ----- or -----
+
+int x = 10 ;
+
+
+
+7.  (5 pts) Assume that there is a double variable amount that has been given a value.  Show how to convert the value of  amount  to a String.
+
+You can use the String.valueof() method .  For example:
+
+String  strval ;
+strval = String.valueof(amount);
+
+
+8.  (5 pts) Suppose that there is a TextField named jTextField3 on a form. Suppose that there is a variable named width declared as a double.  Write the code to get the value from jTextField3 and assign it to width.
+
+
+double   width ;
+String lbltext;
+lbltext = jTextField3.getText() ;
+width = Double.parseDouble(lbltext) ;
+
+--------- or ----------
+
+double   width = Double.parseDouble(jTextField3.getText()) ;
+
+
+9.  (6 pts) Suppose we have the following code:
+
+             int x;
+ double y;
+             x = 6;
+	 x = x * 2.5; // errors out and won’t run since it causes loss of precision (decimals)
+	 y = x * 4;    // this line is ok cause it won’t cause any loss of precision
+
+What are the values of the variables x and y after this code is executed?
+
+Since it won’t run we have to fix it first by re-typing 2.5 as integer which converts it to 2.
+
+             int x;
+ double y;
+             x = 6;
+	 x = x * (int) 2.5;  // this line is ok now cause 2.5 is converted to integer 2
+             y = x * 4;    // this line is ok cause it won’t cause any loss of precision
+
+x will be 12  (6 x 2) and y = 48.0  --------- prove it to yourself in netbeans
+
+
+
+10.  (4 pts) Suppose we have two variables declared and assigned the value 7, but one of them is an int and one is a double:
+               int numunits = 7;
+	   double price = 7.0;
+What is the difference in performing division on these two variables?  For example, how are the values different for the following two expressions:
+
+numunits / 3   ------ rounds to 2 since it is dividing integer by integer and returning an integer.
+price / 3   -------- evaluates to 2.333333333 since it is dividing double by integer and returning double note there won’t be any loss of precision.
+
+
+
+11.  (8 pts) Describe briefly what is a loop and when you would choose to use a “for” loop versus a “while” loop?  (There is no need to give a syntactic description of a for loop or a while loop.)
+
+A loop is a mechanism to perform a block of code repeatedly. Use a “for loop” generally when you know the number of iterations (repetitions).  You’d use a while loop when the termination of a loop will be based on a set of conditions.
+
+
+
+
+12. (6 pts)  Suppose that we have a variable called count that is declared as an integer and initialized to 100:
+               	int  count = 100;
+Using a  while  loop, write the code that will repeatedly subtract 3 from the value of the variable count until the value of result reaches at least 45.
+
+while   (count > 45 ){
+	count = count – 3 ;
+}
+
+13.  (6 pts) Consider the following partial program that assigns the value of the weather    variable based on the value of the  temp  variable:
+
+               int temp;
+	               String weather;
+
+		  // intitilize temp to something here
+
+	               if ( temp >= 60 ) {
+		if ( temp < 70) {
+                                        	weather = “mild”
+	               	     }
+                            	    else {
+	                            	 weather = “warm”
+                           }
+	               }
+               else  {
+ weather = “cold”
+	               }
+
+State for what range of values of the variable  temp, the variable  weather will have the value “mild” after the end of the  if  statement.
+
+For the weather to be mild temp has to be 60 degrees or higher (outer if) but less than 70 (inner if).
+
+
+
+14.  (6 pts) Consider the following partial program that assigns the value of the  rate     variable based on the values of the  amount  and  level  variables.
+	double amount = 180;
+	String level = “high”;
+	double rate = 0.0;
+
+	if ((amount >= 250) && (level.equals(“low”)))
+	{     rate = .05;     }
+
+	// what is rate ??   rate is 0.0 since amount is less that 250 above if will be skipped
+
+	if ((amount < 250) && (level.equals(“low”)))
+	{     rate = .08;     }
+	else
+	{     rate = .10;     }
+
+	// what is rate ??  rate is .10 because although rate is < 250 the level is high so 2nd if will be skipped but its else would be enforced  (&& means AND so both cases have to be true).
+
+State what the value of the rate variable is after the first if statement and after the second if statement.
+
+0.0 and .10
+
+
+
+
+
+15. (8 pts) Suppose that you are shopping on-line and want to check how much the shipping will be on your purchase.  Regular shipping costs $15.00.  But expedited shipping for a purchase that is under $100 will be $30, and expedited shipping for a purchase over $100 will be $25.
+
+Assume that there are already declared variables:   purchase  that has an double value,     shippingtype   that has a String value, which may be either “expedited” or “regular”, and a double variable  shippingcost. Write the code to compute the cost of shipping based on the amount of the purchase and whether the choice is for a “expedited” or “regular” shipping.
+
+double  purchase, shippingcost ;
+String   shippingtype ;
+
+// get the values for the above
+
+if (shippingtype == ″expedited”) {
+      if  (purchase < 100) {
+         shippingcost = 30.00 ;
+     }else {
+        shippingcost = 25.00 ;
+    }
+
+}
+else {
+   shippingcost = 15.00 ;
+}
+
+16. (8 pts)  For the following code, write the values of the variables “result” and “index” at the end of each iteration of the loop, and say what value will be printed out by the System.out.println function.
+
+	               int result = 0;
+	               for ( int index = 1;  index <= 5; index++)
+  {
+	                            if (index <= 2) {
+	                                         result = result + 1;
+	                            }
+	                            else {
+	                                         result = result + 5;
+                            }
+		// what is result ??
+	               }
+	               System.out.println(result);
+
+
+1st  iteration: index = 1, result = 0 + 1 = 1  ------ (goes thru the if part)
+2nd iteration: index = 2, result = 1 + 1 = 2  ------ (goes thru the if part)
+3rd iteration: index = 3, result = 2 + 5 = 7  ------ (goes thru the else part)
+4th iteration: index = 4, result = 7 + 5 = 12  ------ (goes thru the else part)
+5th iteration: index = 5, result = 12 + 5 = 17  ------ (goes thru the else part)
+6th iteration: index = 6  terminates for loop
+
+
+
+
+17. (8 pts) Problem Statement:  Suppose that you are buying tickets to a concert and there are discounts for buying multiple tickets at one time.  On a page on the web site, you can give how many tickets you wish to buy, and it will tell you how much each ticket will be and what the total price is for the tickets.  It will compute the price per ticket as follows:
+
+              If the number of tickets is 4 or less, the price per ticket is $20.
+              If the number of tickets is between 5 and 8, the price per ticket is $18.
+              And if the number of tickets is over 8, the price per ticket is $15.
+
+Write a sequence of steps in “English” to solve this problem.  This sequence should have 3-6 items and does not need to give the details of the rules for computing the price per ticket.
+
+Declare and Initialize all variables
+Get/Read the number of tickets
+Use “if statements to” decide on price of ticket
+Calculate total purchase price
+
+
+
+
+
+
+
+
+
+
+
+18.  (15 pts)  Assume that there is a java form where the user can type in the number of tickets they wish to purchase in jTextField1, a button that they can use to compute the cost of the tickets, and that there are two labels jLabel1 and jLabel2 where the price per ticket and the total of the total of the ticket cost will be displayed. The price per ticket will be computed according to the number of tickets, as described in Problem 17.
+
+Write the java code that will go inside the button method to solve this problem.  Be sure to show all variable declarations.
+
+    // declare variables
+    int 	numoftckts ;        // number of tickets
+    String 	stext ;          // temporary place holder of textual String data
+    double	 tickprice ;      // ticket price
+    double 	totpurchase ;    // total purchase amount
+
+
+    // read the text of jTextField1 which represents the number of tickets
+    // store the text temporarily in stext
+
+    stext = jTextField1.getText() ;
+
+
+    //convert stext to integer and store in numoftckts
+    // numoftckts  can then be used to decide on pricing and ticket price
+    numoftckts = Integer.parseInt(stext) ;
+
+    // calculate price of ticket based on # of tickets purchased
+
+    if (numoftckts <= 4) {
+        // if it’s equal to 4 or less than 4
+        tickprice = 20.00 ;
+    }
+    else {
+
+        // the else is when numoftckts is NOT equal to 4 of if it is NOT less than 4
+
+        // check if numoftckts falls between 5 and 8
+        if ((numoftckts >= 5) && (numoftckts <= 8) ) {
+            // if it’s between 5 and 8 price of ticket is 18.00
+            tickprice = 18.00 ;
+        }
+        else {
+            // this else is when numoftckts is more than 8
+            // if it’s more than 8 then price of ticket is 15.00
+            tickprice = 15.00 ;
+        }
+
+    }
+
+    // now that tickprice is set to the proper pricig calculate total cost of tickets
+
+    totpurchase = numoftckts * tickprice ;
+
+
+
+    // convert tickprice to a String so that it can be displayed in a textfiled
+    // use stext to temporarily hold this converted text
+
+    stext = String.valueOf(tickprice);
+
+   // display the converted text on the textfield
+    jLabel1.setText(stext);
+
+   // same thing with totpurchase but display it in jLabel2 instead
+    stext = String.valueOf(totpurchase) ;
+    jLabel2.setText(stext);
+
+   // note: stext has been used several times in code to temporarily hold String data values
